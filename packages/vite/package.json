@@ -54,7 +54,8 @@
   "files": [
     "dist",
     "inject",
-    "cjsWrapper.js"
+    "cjsWrapper.js",
+    "compiled"
   ],
   "scripts": {
     "build": "tsx build.mts && yarn build:types",

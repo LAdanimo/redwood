@@ -1,13 +1,15 @@
 import busboy from 'busboy'
 import type { Request, Response } from 'express'
-import RSDWServer from 'react-server-dom-webpack/server.node.unbundled'
 
+import {
+  decodeReply,
+  decodeReplyFromBusboy,
+  // @ts-expect-error todo
+} from '../../compiled/react-server-dom-webpack.server'
 import { hasStatusCode } from '../lib/StatusError.js'
 
 import { sendRscFlightToStudio } from './rscStudioHandlers.js'
 import { renderRsc } from './rscWorkerCommunication.js'
-
-const { decodeReply, decodeReplyFromBusboy } = RSDWServer
 
 export function createRscRequestHandler() {
   // This is mounted at /rw-rsc, so will have /rw-rsc stripped from req.url
