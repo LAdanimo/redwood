@@ -208,7 +208,7 @@ When trying to find the *full* text of the body, it should *not* be present.
 ```javascript
 expect(matchedBody).toBeInTheDocument()
 ```
-Assert that the truncated text is .
+Assert that the truncated text is present.
 
 ```javascript
 expect(ellipsis).toBeInTheDocument()
